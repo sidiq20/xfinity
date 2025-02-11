@@ -3,7 +3,6 @@ import { FiMenu, FiSearch, FiShoppingCart, FiUser } from 'react-icons/fi';
 
 export default function Navbar({ onNavigate }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isLoginOpen, setIsLoginOpen] = useState(false);
 
   const handleNavigation = (page) => {
     onNavigate(page);
