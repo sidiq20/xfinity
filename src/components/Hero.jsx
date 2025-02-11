@@ -1,4 +1,4 @@
-export default function Hero() {
+export default function Hero({ onNavigate }) {
   return (
     <div className="relative bg-xfinity-dark text-white">
       <div className="absolute inset-0 bg-gradient-to-r from-black/50 to-transparent"></div>
@@ -11,10 +11,16 @@ export default function Hero() {
             Get reliable Internet with download speeds up to 2000 Mbps
           </p>
           <div className="space-x-4">
-            <button className="bg-xfinity-blue text-white px-8 py-3 rounded-full font-semibold hover:bg-blue-700 transition-colors">
+            <button
+              onClick={() => onNavigate('login')}
+              className="bg-xfinity-blue text-white px-8 py-3 rounded-full font-semibold hover:bg-blue-700 transition-colors"
+            >
               Shop Now
             </button>
-            <button className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-full font-semibold hover:bg-white/10 transition-colors">
+            <button
+              onClick={() => onNavigate('login')}
+              className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-full font-semibold hover:bg-white/10 transition-colors"
+            >
               Check Availability
             </button>
           </div>
