@@ -6,7 +6,7 @@ import StreamingOffers from './components/StreamingOffers';
 import CompanyHighlights from './components/CompanyHighlights';
 import Footer from './components/Footer';
 import Shop from './components/Shop';
-import LoginPage from './components/LoginPage';
+import LoginPage from "./components/LoginPage";
 import { useState } from 'react';
 
 function App() {
@@ -21,7 +21,7 @@ function App() {
       default:
         return (
           <>
-            <Hero />
+            <Hero onNavigate={setCurrentPage} />
             <Features />
             <PromoOffers />
             <StreamingOffers />
