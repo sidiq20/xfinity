@@ -69,33 +69,28 @@ export default function Navbar({ onNavigate }) {
           </div>
         </div>
 
-          {/* Mobile Navigation */}
-          {isMenuOpen && (
-            <div className="md:hidden">
-              <div className="px-2 pt-2 pb-3 space-y-1">
-                <button 
-                  onClick={() => handleNavigation('shop')}
-                  className="block w-full text-left px-3 py-2 text-gray-700 hover:text-xfinity-blue"
-                >
-                  Shop
-                </button>
-                <a href="#" className="block px-3 py-2 text-gray-700 hover:text-xfinity-blue">My Account</a>
-                <a href="#" className="block px-3 py-2 text-gray-700 hover:text-xfinity-blue">Support</a>
-                <button
-                  onClick={() => {
-                    setIsLoginOpen(true);
-                    setIsMenuOpen(false);
-                  }}
-                  className="block w-full text-left px-3 py-2 text-gray-700 hover:text-xfinity-blue"
-                >
-                  Sign In
-                </button>
-              </div>
+        {/* Mobile Navigation */}
+        {isMenuOpen && (
+          <div className="md:hidden">
+            <div className="px-2 pt-2 pb-3 space-y-1">
+              <button
+                onClick={() => handleNavigation('shop')}
+                className="block w-full text-left px-3 py-2 text-gray-700 hover:text-purple-700"
+              >
+                Shop
+              </button>
+              <a href="#" className="block px-3 py-2 text-gray-700 hover:text-purple-700">My Account</a>
+              <a href="#" className="block px-3 py-2 text-gray-700 hover:text-purple-700">Support</a>
+              <button
+                onClick={() => handleNavigation('login')}
+                className="block w-full text-left px-3 py-2 text-gray-700 hover:text-purple-700"
+              >
+                Sign In
+              </button>
             </div>
-          )}
-        </div>
-      </nav>
-      <LoginModal isOpen={isLoginOpen} onClose={() => setIsLoginOpen(false)} />
-    </>
+          </div>
+        )}
+      </div>
+    </nav>
   );
 }
