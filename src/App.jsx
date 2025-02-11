@@ -15,6 +15,8 @@ function App() {
     switch(currentPage) {
       case 'shop':
         return <Shop />;
+      case 'login':
+        return <LoginPage />;
       default:
         return (
           <>
