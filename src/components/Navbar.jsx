@@ -37,26 +37,26 @@ export default function Navbar({ onNavigate }) {
             </svg>
           </div>
 
-            {/* Desktop Navigation */}
-            <div className="hidden md:flex items-center space-x-8">
-              <button 
-                onClick={() => handleNavigation('shop')}
-                className="text-gray-700 hover:text-xfinity-blue"
-              >
-                Shop
-              </button>
-              <a href="#" className="text-gray-700 hover:text-xfinity-blue">My Account</a>
-              <a href="#" className="text-gray-700 hover:text-xfinity-blue">Support</a>
-              <FiSearch className="h-5 w-5 text-gray-700 cursor-pointer" />
-              <FiShoppingCart className="h-5 w-5 text-gray-700 cursor-pointer" />
-              <button
-                onClick={() => setIsLoginOpen(true)}
-                className="flex items-center text-gray-700 hover:text-xfinity-blue"
-              >
-                <FiUser className="h-5 w-5 mr-2" />
-                Sign In
-              </button>
-            </div>
+          {/* Desktop Navigation */}
+          <div className="hidden md:flex items-center space-x-8">
+            <button
+              onClick={() => handleNavigation('shop')}
+              className="text-gray-700 hover:text-purple-700"
+            >
+              Shop
+            </button>
+            <a href="#" className="text-gray-700 hover:text-purple-700">My Account</a>
+            <a href="#" className="text-gray-700 hover:text-purple-700">Support</a>
+            <FiSearch className="h-5 w-5 text-gray-700 cursor-pointer" />
+            <FiShoppingCart className="h-5 w-5 text-gray-700 cursor-pointer" />
+            <button
+              onClick={() => handleNavigation('login')}
+              className="flex items-center text-gray-700 hover:text-purple-700"
+            >
+              <FiUser className="h-5 w-5 mr-2" />
+              Sign In
+            </button>
+          </div>
 
             {/* Mobile menu button */}
             <div className="md:hidden">
