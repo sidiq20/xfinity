@@ -6,6 +6,7 @@ import StreamingOffers from './components/StreamingOffers';
 import CompanyHighlights from './components/CompanyHighlights';
 import Footer from './components/Footer';
 import Shop from './components/Shop';
+import LoginPage from './components/LoginPage';
 import { useState } from 'react';
 
 function App() {
