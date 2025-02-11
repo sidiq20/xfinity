@@ -36,7 +36,7 @@ function App() {
       <main className="flex-grow">
         {renderPage()}
       </main>
-      <Footer />
+      {currentPage !== 'login' && <Footer />}
     </div>
   );
 }
