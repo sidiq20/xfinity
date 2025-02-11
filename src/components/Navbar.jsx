@@ -58,16 +58,16 @@ export default function Navbar({ onNavigate }) {
             </button>
           </div>
 
-            {/* Mobile menu button */}
-            <div className="md:hidden">
-              <button
-                onClick={() => setIsMenuOpen(!isMenuOpen)}
-                className="text-gray-700 hover:text-xfinity-blue"
-              >
-                <FiMenu className="h-6 w-6" />
-              </button>
-            </div>
+          {/* Mobile menu button */}
+          <div className="md:hidden">
+            <button
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+              className="text-gray-700 hover:text-purple-700"
+            >
+              <FiMenu className="h-6 w-6" />
+            </button>
           </div>
+        </div>
 
           {/* Mobile Navigation */}
           {isMenuOpen && (
