@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import { FiMenu, FiSearch, FiShoppingCart, FiUser } from 'react-icons/fi';
-import LoginModal from './LoginModal';
 
 export default function Navbar({ onNavigate }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
