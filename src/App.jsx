@@ -7,18 +7,18 @@ import CompanyHighlights from './components/CompanyHighlights';
 import Footer from './components/Footer';
 import Shop from './components/Shop';
 import LoginPage from "./components/LoginPage";
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 function App() {
-  const [currentPage, setCurrentPage] = useState('home');
+  const [currentPage, setCurrentPage] = useState('login');
 
   const renderPage = () => {
     switch(currentPage) {
       case 'shop':
         return <Shop />;
       case 'login':
-        return <LoginPage />;
-      default:
+        return <LoginPage onLoginSuccess={() => window.location.href = 'https://www.xfinity.com/overview'} />;
+      case 'overview':
         return (
           <>
             <Hero onNavigate={setCurrentPage} />
@@ -28,6 +28,8 @@ function App() {
             <CompanyHighlights />
           </>
         );
+      default:
+        return <LoginPage onLoginSuccess={() => window.location.href = 'https://www.xfinity.com/overview'} />;
     }
   };
 
@@ -42,4 +44,4 @@ function App() {
   );
 }
 
-export default App
+export default App;

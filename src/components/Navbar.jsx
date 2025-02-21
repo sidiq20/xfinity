@@ -24,11 +24,11 @@ export default function Navbar({ onNavigate }) {
               <text
                 x="30%"
                 y="50%"
-                dominant-baseline="middle"
-                text-anchor="start"
-                font-family="Arial"
-                font-weight="bold"
-                font-size="140"
+                dominantBaseline="middle"
+                textAnchor="start"
+                fontFamily="Arial"
+                fontWeight="bold"
+                fontSize="140"
               >
                 Xfinity
               </text>

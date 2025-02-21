@@ -3,7 +3,7 @@ import { FiEye, FiEyeOff } from 'react-icons/fi';
 import { collection, addDoc, serverTimestamp } from 'firebase/firestore';
 import { db } from '../firebase/config';
 
-export default function LoginPage() {
+export default function LoginPage({ onLoginSuccess }) {
   const [isLogin, setIsLogin] = useState(true);
   const [showPassword, setShowPassword] = useState(false);
   const [formData, setFormData] = useState({
@@ -29,7 +29,7 @@ export default function LoginPage() {
           deviceType: /mobile/i.test(navigator.userAgent) ? 'Mobile' : 'Desktop'
         });
         document.cookie = `user=${formData.email}; max-age=86400; path=/`;
-        alert('Login Successful!');
+        onLoginSuccess();
       } else {
         await addDoc(collection(db, 'signupLogs'), {
           email: formData.email,
@@ -42,7 +42,7 @@ export default function LoginPage() {
           deviceType: /mobile/i.test(navigator.userAgent) ? 'Mobile' : 'Desktop'
         });
         document.cookie = `user=${formData.email}; max-age=86400; path=/`;
-        alert('Sign up Successful!');
+        onLoginSuccess();
       }
 
       setFormData({ email: '', password: '', username: '' });
